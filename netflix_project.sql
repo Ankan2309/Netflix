@@ -28,7 +28,7 @@ select count(case when type = 'Movie' then 1 end) movie,
 
 --2. Find the most common rating for movies and TV shows
 select type, rating, count(*) from netflix group by 1,2 order by 3 desc;
-
+[OR]
 WITH RatingCounts AS (
     SELECT 
         type,
